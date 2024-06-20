@@ -17,7 +17,7 @@
 <body>
     <h1>'v-bind' font size example </h1>
     <div id="app">
-      <div v-bind:style="{ fontSize: size}">
+      <div v-bind:style="{ fontSize: size + 'pt'}">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dicta autem molestias animi assumenda, id soluta veniam iure. Architecto, natus! Dolores quidem quasi animi fuga harum amet placeat, accusamus aperiam.</p>
       </div>
     </div>
@@ -26,7 +26,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                   size: '25px'
+                   size: 30
                 }
             }
         })
