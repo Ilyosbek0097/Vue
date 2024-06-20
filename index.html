@@ -9,7 +9,10 @@
             width: 400px;
             padding: 20px;
             border: dashed black 1px;
-            background-color: aqua;
+        }
+        .myClass {
+            background-color: greenyellow;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
       
     </style>
@@ -17,7 +20,7 @@
 <body>
     <h1>'v-bind' font size example </h1>
     <div id="app">
-      <div v-bind:style="{ fontSize: size + 'pt', backgroundColor:  isImportant ? 'hsl('+bgVal+', 80%, 80%)' : 'red'}">
+      <div v-bind:class="{ myClass: true}">
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dicta autem molestias animi assumenda, id soluta veniam iure. Architecto, natus! Dolores quidem quasi animi fuga harum amet placeat, accusamus aperiam.</p>
       </div>
     </div>
@@ -26,9 +29,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                   size: 50,
-                   bgVal: 100,
-                   isImportant: false,
+                 
                 }
             }
         })
