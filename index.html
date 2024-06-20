@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Vue Page</title>
+    <title>V-bind image source example</title>
     <style>
-        div {
-            margin: 10px;
-            padding: 10px;
-            border: 1px solid black;
-            display: inline-block;
-        }
-        .pinkBG {
-            background-color: pink;
-        }
+       #app {
+        border: 1px dashed black;
+        width: 250px;
+        padding: 0 10px 10px 10px;
+       }
+       img {
+        width: 100%;
+       }
     </style>
 </head>
 <body>
-    <h1>'v-bind' example </h1>
+    <h1>'v-bind' Image Source Example </h1>
     <div id="app">
-       <div v-bind:class="vueClass">
-            This element background is lightpink
-       </div>
+       <p>This Image source v-bind directives</p>
+       <img v-bind:src="url">
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                   vueClass: "pinkBG"
+                   url: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg"
                 }
             }
         })
