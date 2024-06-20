@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v-if direktivi</title>
+    <title>v-show direktivi uchun misollar</title>
+    <style>
+        #app {
+            border: black dashed 1px;
+            width: 400px;
+            padding: 0 20px 20px 20px;
+        }
+
+        #app div {
+            padding: 20px;
+            background-color: lightseagreen;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    <h1> Example with v-if and v-else</h1>
+    <h1>V-show Direktivi</h1>
     <div id="app">
-        <div>
-            <p v-if="text.includes('Onamni')">
-                Bor
-            </p>          
-            <p v-else="">
-                Yo'q
+        <div v-show="showDiv">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quasi soluta facere dolor porro vitae voluptatem aut. Odio illum soluta, dicta autem, ad in doloremque delectus sapiente laudantium necessitatibus labore reprehenderit.
             </p>
-            
         </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
@@ -23,7 +33,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                   text: "Men Onam Juda Ham Qattiq Yaxshi Ko'raman!"
+                    showDiv: true
                 }
             }
         })
