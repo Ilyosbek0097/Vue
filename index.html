@@ -9,8 +9,11 @@
     <h1> Example with v-if and v-else</h1>
     <div id="app">
         <div>
-            <p v-if="typeWriteInStock">
+            <p v-if="typeWriteInStock > 10">
                 in stock
+            </p>
+            <p v-else-if="typeWriteInStock>0 && typeWriteInStock<10">
+                very few left!
             </p>
             <p v-else="">
                 not in stock
@@ -23,7 +26,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                   typeWriteInStock: false 
+                   typeWriteInStock: 0
                 }
             }
         })
