@@ -3,38 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V-bind font size example</title>
-    <style>
-        #app > div {
-            width: 400px;
-            padding: 20px;
-            border: dashed black 1px;
-        }
-        .myClass {
-            background-color: greenyellow;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-        }
-      
-    </style>
+    <title>v-if direktivi</title>
 </head>
 <body>
-    <h1>'v-bind' font size example </h1>
+    <h1> Example with v-if and v-else</h1>
     <div id="app">
-      <div :class="{ myClass: isImportant}">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dicta autem molestias animi assumenda, id soluta veniam iure. Architecto, natus! Dolores quidem quasi animi fuga harum amet placeat, accusamus aperiam.</p>
-      </div>
+        <div>
+            <p v-if="typeWriteInStock">
+                in stock
+            </p>
+            <p v-else="">
+                not in stock
+            </p>
+            
+        </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                    isImportant: true
+                   typeWriteInStock: false 
                 }
             }
         })
-
-        app.mount('#app');
+        app.mount('#app')
     </script>
 </body>
 </html>
