@@ -22,6 +22,14 @@
     <h1>V-show Direktivi</h1>
     <div id="app">
         <div v-show="showDiv">
+            <h4>v-show direktivi</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quasi soluta facere dolor porro vitae voluptatem aut. Odio illum soluta, dicta autem, ad in doloremque delectus sapiente laudantium necessitatibus labore reprehenderit.
+            </p>
+        </div>
+        <div v-if="showDiv">
+            <h4>v-if direktivi</h4>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Quasi soluta facere dolor porro vitae voluptatem aut. Odio illum soluta, dicta autem, ad in doloremque delectus sapiente laudantium necessitatibus labore reprehenderit.
@@ -33,7 +41,7 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    showDiv: true
+                    showDiv: false
                 }
             }
         })
