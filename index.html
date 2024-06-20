@@ -3,30 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>V-bind image source example</title>
+    <title>V-bind font size example</title>
     <style>
-       #app {
-        border: 1px dashed black;
-        width: 250px;
-        padding: 0 10px 10px 10px;
-       }
-       img {
-        width: 100%;
-       }
+        #app > div {
+            width: 400px;
+            padding: 20px;
+            border: dashed black 1px;
+            background-color: aqua;
+        }
+      
     </style>
 </head>
 <body>
-    <h1>'v-bind' Image Source Example </h1>
+    <h1>'v-bind' font size example </h1>
     <div id="app">
-       <p>This Image source v-bind directives</p>
-       <img v-bind:src="url">
+      <div v-bind:style="{ fontSize: size}">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit dicta autem molestias animi assumenda, id soluta veniam iure. Architecto, natus! Dolores quidem quasi animi fuga harum amet placeat, accusamus aperiam.</p>
+      </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const app = Vue.createApp({
             data() {
                 return {
-                   url: "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w600/2023/10/free-images.jpg"
+                   size: '25px'
                 }
             }
         })
